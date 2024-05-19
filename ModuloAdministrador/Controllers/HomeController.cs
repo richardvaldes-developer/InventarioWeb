@@ -26,6 +26,10 @@ namespace ModuloAdministrador.Controllers
         {
             return View();
         }
+        public IActionResult AdministradorInicio()
+        {
+            return View();
+        }
 
 
 
