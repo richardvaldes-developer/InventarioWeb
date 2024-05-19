@@ -18,7 +18,11 @@ namespace ModuloAdministrador.Controllers
             return View();
         }
 
-        public IActionResult AdministradorHome()
+        public IActionResult RecuperarContrasena()
+        {
+            return View();
+        }
+        public IActionResult RegistrarUsuario()
         {
             return View();
         }
