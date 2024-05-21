@@ -52,21 +52,24 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Tienda Online
+                
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Ir a Tienda</span>
+                    <i class=""></i> <!-- Agregar icono-->
+                    <span>Ir a</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Articulos</h6>
-                        <a class="collapse-item" href="#">Buscar</a>
-                        <a class="collapse-item" href="#">Mostrar Todos</a>
+                        <a class="collapse-item" asp-controller="home" asp-action="Buscar">Buscar</a> 
+                        <a class="collapse-item" href="#">Tienda</a>
+                        <a class="collapse-item" asp-controller="home" asp-action="Inventario">Ir a Inventario</a>
+                        <a class="collapse-item" href="#">Reportes Tienda</a>
+                        <a class="collapse-item" href="#">Reportes Inventario</a>
                     </div>
                 </div>
             </li>
@@ -75,7 +78,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class=""></i><!--Agregar icono-->
                     <span>Utilidades</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"

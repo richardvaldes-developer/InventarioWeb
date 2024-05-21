@@ -1,7 +1,7 @@
-﻿
+﻿<!-- Pagina registrar usuario-->
 @{
     ViewData["Title"] = "RegistrarUsuario";
-    Layout = "~/Views/Shared/_LayoutSeccionAdministrador.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -21,10 +21,12 @@
                         Recuperar Contraseña
                     </div>
                     <div class="card-body">
-                        <form asp-action="RegistrarUsuario" method="post">
+                        <form asp-action="RegistrarUsuario" method="post"><!-- Formularo Registrar Nuevo usuario-->
                             <div class="mb-3">
-                                <label for="email" class="form-label">Correo Electrónico:</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <label for="email" class="form-label">Correo Electrónico:</label><!-- esto es solo una prueba-->
+                                <input type="email" class="form-control" id="email" name="email" required><!-- esto es solo una prueba-->
+                                <label for="email2" class="form-label">Confirmar Email</label><!-- esto es solo una prueba-->
+                                <input type="email2" class="form-control" id="email" name="email" required><!-- esto es solo una prueba-->
                             </div>
                             <button type="submit" class="btn btn-primary">Crear</button>
                             <div class="text-center mt-5">

@@ -31,7 +31,15 @@ namespace ModuloAdministrador.Controllers
             return View();
         }
 
+        public IActionResult Inventario()
+        {
+            return View();
+        }
 
+        public IActionResult Buscar()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
