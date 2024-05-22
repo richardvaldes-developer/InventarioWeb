@@ -7,38 +7,34 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <div class="card mb-4">
             <div class="card-header">
-                Filtrar Reportes
+                Buscar Producto
             </div>
             <div class="card-body">
                 <form>
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <label for="filterByAmountHigh" class="form-label">Monto más alto</label>
-                            <input type="number" class="form-control" id="filterByAmountHigh" placeholder="Monto más alto">
+                            <label for="filterByAmountHigh" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombreProducto" placeholder="Nombre Producto">
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="filterByAmountLow" class="form-label">Monto más bajo</label>
-                            <input type="number" class="form-control" id="filterByAmountLow" placeholder="Monto más bajo">
+                            <label for="filterByAmountLow" class="form-label">Precio desde</label>
+                        <input type="number" class="form-control" id="precioDesde" placeholder="Precio desde">
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="filterBySales" class="form-label">Ventas</label>
-                            <input type="text" class="form-control" id="filterBySales" placeholder="Ventas">
+                            <label for="filterBySales" class="form-label">Precio Hasta</label>
+                        <input type="number" class="form-control" id="precioHasta" placeholder="Precio Hasta">
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="filterByDate" class="form-label">Fecha</label>
-                            <input type="date" class="form-control" id="filterByDate">
+                            <label for="filterByDate" class="form-label">Fecha Creación</label>
+                            <input type="date" class="form-control" id="fechaCreacion">
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="filterById" class="form-label">ID</label>
+                            <label for="filterById" class="form-label">ID Producto</label>
                             <input type="text" class="form-control" id="filterById" placeholder="ID">
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="filterByName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="filterByName" placeholder="Nombre">
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <label for="filterByQuantitySold" class="form-label">Cantidad de Vendidos</label>
-                            <input type="number" class="form-control" id="filterByQuantitySold" placeholder="Cantidad de Vendidos">
+                            <label for="filterByName" class="form-label">Categoria</label>
+                            <input type="text" class="form-control" id="categoria" placeholder="Categoria">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Buscar</button>
