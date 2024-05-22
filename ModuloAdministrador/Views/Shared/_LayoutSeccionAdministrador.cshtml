@@ -34,7 +34,7 @@
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
-                <div class="sidebar-brand-text mx-3">Sección Tienda Online</div>
+                <div class="sidebar-brand-text mx-3">Visual Administrador</div>
             </a>
 
             <!-- linea divisora -->
@@ -93,9 +93,9 @@
                 <div id="collapseUsuarios" class="collapse" aria-labelledby="headingUtilities"
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Nuevo</a>
-                        <a class="collapse-item" href="#">Editar</a>
-                        <a class="collapse-item" href="#">Buscar</a>
+                        <a class="collapse-item" href="#">Nuevo Usuario</a>
+                        <a class="collapse-item" href="#">Listar Usuarios</a>
+                        <a class="collapse-item" href="#">Buscar Usuario</a>
                     </div>
                 </div>
             </li>
@@ -135,8 +135,6 @@
             </li>
 
 
-            
-
             <hr class="sidebar-divider">
 
             <!-- Configuraciones-->
@@ -149,16 +147,18 @@
                 <div id="collapseConfiguraciones" class="collapse" aria-labelledby="headingUtilities"
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">1</a>
-                        <a class="collapse-item" href="#">2</a>
+                        <a class="collapse-item" href="#">Datos de la empresa</a>
+                        <a class="collapse-item" href="#">Mi cuenta</a>
+                        <a class="collapse-item" href="#">Mi Foto de perfil</a>
+                        <a class="collapse-item" asp-controller="home" asp-action="RecuperarContrasena">Recuperar contraseña</a>
                     </div>
                 </div>
             </li>
 
-            <!-- Cerrar Seción-->
+            <!-- Cerrar sesión -->
             <li class="nav-item">
                 <a class="nav-link" asp-controller="home" asp-action="AdministradorInicio">
-                    <span>Cerrar Seción</span>
+                    <span>Cerrar sesión </span>
                 </a>
             </li>
 
@@ -170,7 +170,8 @@
             </div>
 
         </ul>
-        <!-- Content Wrapper -->
+
+        <!-- Contendio barra superior -->
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->
             <div id="content">
@@ -299,8 +300,6 @@
                 <!--container-fluid -->
                 <div class="container-fluid">
                     @RenderBody()
-
-                   
                 </div>
                 <!--container-fluid -->
 
@@ -311,7 +310,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Richard Valdes 2024</span>
+                        <span>Copyright &copy</span>
                     </div>
                 </div>
             </footer>
