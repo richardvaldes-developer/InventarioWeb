@@ -1,0 +1,40 @@
+﻿@model ModuloAdministrador.Models.Usuario
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutSeccionAdministrador.cshtml";
+}
+
+<h1>Crear Usuario</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreUsuario" class="control-label">Nombre Usuario (Usuario login)</label>
+                <input asp-for="NombreUsuario" class="form-control" />
+                <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContraseniaUsuario" class="control-label">Contraseña</label>
+                <input asp-for="ContraseniaUsuario" class="form-control" />
+                <span asp-validation-for="ContraseniaUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoUsuario" class="control-label">Tipo de usuario</label>
+                <input asp-for="TipoUsuario" class="form-control" />
+                <span asp-validation-for="TipoUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+

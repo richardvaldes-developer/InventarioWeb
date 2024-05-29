@@ -1,0 +1,40 @@
+﻿@model ModuloAdministrador.Models.Producto
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutSeccionAdministrador.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>¿Estas seguro de borrar deste producto?</h3>
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Nombre Producto
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            Gramaje / Peso
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GramajeProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            Stock
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StockProducto)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdProductoPk" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver</a>
+    </form>
+</div>

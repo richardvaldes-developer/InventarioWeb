@@ -63,6 +63,14 @@
                 </a>
             </li>
 
+            <!-- Usuarios-->
+
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Usuarios" asp-action="Index">
+                    <span>Usuarios</span>
+                </a>
+            </li>
+
 
             <!-- Tienda -->
             <li class="nav-item">
@@ -76,6 +84,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         
                         <a class="collapse-item" href="#">Ir a Tienda</a>
+                        <a class="collapse-item" asp-controller="~/ModuloSucursales/home" asp-action="Index">Ir a Inventario</a>
                         <a class="collapse-item" asp-controller="home" asp-action="Inventario">Ir a Inventario</a>
                         <a class="collapse-item" href="#">Reportes Tienda</a>
                         <a class="collapse-item" href="#">Reportes Inventario</a>
@@ -83,22 +92,7 @@
                 </div>
             </li>
 
-            <!-- Usuarios-->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsuarios"
-                   aria-expanded="true" aria-controls="collapseUsuarios">
-                    <i class=""></i><!--Agregar icono-->
-                    <span>Usuarios</span>
-                </a>
-                <div id="collapseUsuarios" class="collapse" aria-labelledby="headingUtilities"
-                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Nuevo Usuario</a>
-                        <a class="collapse-item" href="#">Listar Usuarios</a>
-                        <a class="collapse-item" href="#">Buscar Usuario</a>
-                    </div>
-                </div>
-            </li>
+            
 
             <!-- Pedidos-->
             <li class="nav-item">
@@ -129,7 +123,7 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="#">Editar</a>
-                        <a class="collapse-item" asp-controller="home" asp-action="Buscar">Buscar</a>
+                        <a class="collapse-item" asp-controller="Productos" asp-action="Index">Buscar</a>
                     </div>
                 </div>
             </li>
@@ -149,7 +143,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="#">Datos de la empresa</a>
                         <a class="collapse-item" href="#">Mi cuenta</a>
-                        <a class="collapse-item" href="#">Mi Foto de perfil</a>
                         <a class="collapse-item" asp-controller="home" asp-action="RecuperarContrasena">Recuperar contraseña</a>
                     </div>
                 </div>
@@ -163,11 +156,6 @@
             </li>
 
             <hr class="sidebar-divider">
-
-            <!-- Boton esconder barra lateral, no terminado-->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
 
         </ul>
 

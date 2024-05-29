@@ -1,0 +1,36 @@
+﻿@model ModuloAdministrador.Models.Producto
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutSeccionAdministrador.cshtml";
+}
+
+<h1> Detalle Productos</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Nombre Producto
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            Gramaje / Peso
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GramajeProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            Stock
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StockProducto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdProductoPk">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</div>

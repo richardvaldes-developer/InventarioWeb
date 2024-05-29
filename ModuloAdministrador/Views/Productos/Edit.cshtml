@@ -1,0 +1,41 @@
+﻿@model ModuloAdministrador.Models.Producto
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutSeccionAdministrador.cshtml";
+}
+
+<h1>Editar Producto</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdProductoPk" />
+            <div class="form-group">
+                <label asp-for="NombreProducto" class="control-label">Producto</label>
+                <input asp-for="NombreProducto" class="form-control" />
+                <span asp-validation-for="NombreProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GramajeProducto" class="control-label">Gramaje/Peso</label>
+                <input asp-for="GramajeProducto" class="form-control" />
+                <span asp-validation-for="GramajeProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StockProducto" class="control-label">Stock</label>
+                <input asp-for="StockProducto" class="form-control" />
+                <span asp-validation-for="StockProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
