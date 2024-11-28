@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<body class="bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="card p-4 shadow-sm" style="max-width: 400px; width: 100%;">
+                <div class="text-center mb-4">
+                    <i class="bi bi-person-circle fs-1"></i>
+                </div>
+                <h2 class="text-center text-primary mb-4">Usuario</h2>
+                <form asp-action="VerificarUsuario" asp-controller="User" method="post">
+                    <div class="mb-3">
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Usuario" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
+                    </div>
+                    <button class="btn btn-primary w-100" type="submit">Iniciar sesión</button>
+                </form>
+                <div class="text-center mt-3">
+                    <a asp-controller="home" asp-action="RecuperarContrasena">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>

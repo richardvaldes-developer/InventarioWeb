@@ -1,6 +1,7 @@
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using ModuloAdministrador.Data;
 using ModuloAdministrador.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Configurando servicios coneccion a base de datos
-builder.Services.AddDbContext<InventarioContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
+// Agregar el contexto de datos
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
 
 
 var app = builder.Build();
@@ -32,6 +34,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Login}/{id?}");
+    pattern: "{controller=User}/{action=Index}/{id?}");
 
 app.Run();
