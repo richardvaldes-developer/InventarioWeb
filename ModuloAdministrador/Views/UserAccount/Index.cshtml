@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ModuloAdministrador.Models.Users>
+
+@{
+    ViewData["Title"] = "Usuarios";
+    Layout = "~/Views/Shared/_LayoutSeccionAdministrador.cshtml";
+}
+
+<p>
+    <a href="@Url.Action("Create", "UserAccount")" class="btn btn-primary">Crear Usuario</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.UserName)</th>
+            <th>@Html.DisplayNameFor(model => model.TypeUser)</th>
+            <th>@Html.DisplayNameFor(model => model.IduserPK)</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.TypeUser</td>
+                <td>@user.IduserPK</td>
+                <td>
+                    <a href="@Url.Action("Edit", "UserAccount", new { id = user.IduserPK })" class="btn btn-warning">Editar</a>
+                    <a href="@Url.Action("Delete", "UserAccount", new { id = user.IduserPK })" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

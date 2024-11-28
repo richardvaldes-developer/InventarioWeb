@@ -7,11 +7,11 @@ using ModuloAdministrador.Models;
 
 namespace ModuloAdministrador.Controllers
 {
-    public class UserController : Controller
+    public class UserLoginController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public UserController(ApplicationDbContext context)
+        public UserLoginController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -47,7 +47,7 @@ namespace ModuloAdministrador.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine($"Error inesperado: {ex.Message}");
-                TempData["ErrorMessage"] = "Error inesperado: {ex.Message};
+                TempData["ErrorMessage"] = "Ups... Estamos con intermitencia en nuestra base de datos, por favor intenta nuevamente.";
                 return RedirectToAction("ErrorPage");
             }
         }
