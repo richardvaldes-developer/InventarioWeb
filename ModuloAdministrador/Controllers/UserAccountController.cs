@@ -91,33 +91,40 @@ namespace ModuloAdministrador.Controllers
             return View(user);
         }
 
-        // Acción para mostrar la confirmación de eliminación de un usuario
-        public async Task<IActionResult> Delete(int? id)
+        // GET: UserAccount/Delete/5 (Formulario para confirmar la eliminación)
+        public IActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.IduserPK == id);
+            var user = _context.Users.Find(id);
             if (user == null)
             {
                 return NotFound();
             }
-
             return View(user);
         }
 
-        // Acción POST para eliminar un usuario
+        // POST: UserAccount/Delete/5 (Elimina un usuario)
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
-            var user = await _context.Users.FindAsync(id);
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index)); // Redirige a la lista de usuarios después de eliminar
+            var user = _context.Users.Find(id);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                _context.SaveChanges();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: UserAccount/Details/5 (Ver detalles de un usuario)
+        public IActionResult Details(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return View(user);
         }
 
         // Verificar si el usuario existe en la base de datos

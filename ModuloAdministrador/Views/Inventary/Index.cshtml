@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutSeccionAdministrador.cshtml";
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-download fa-sm text-white-50"></i> Generar Reporte
+    </a>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Inventario</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Nombre del Producto</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Fecha de Ingreso</th>
+                    <th scope="col">Proveedor</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Producto A</td>
+                    <td>Descripción del Producto A</td>
+                    <td>Categoría 1</td>
+                    <td>50</td>
+                    <td>$100.00</td>
+                    <td>2024-05-21</td>
+                    <td>Proveedor X</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Producto B</td>
+                    <td>Descripción del Producto B</td>
+                    <td>Categoría 2</td>
+                    <td>30</td>
+                    <td>$200.00</td>
+                    <td>2024-05-20</td>
+                    <td>Proveedor Y</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

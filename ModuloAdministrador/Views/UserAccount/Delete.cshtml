@@ -5,16 +5,22 @@
     Layout = "~/Views/Shared/_LayoutSeccionAdministrador.cshtml";
 }
 
-<h1>Eliminar Usuario</h1>
+<h2>Eliminar Usuario</h2>
 
-<h4>¿Estás seguro de que quieres eliminar este usuario?</h4>
-<hr />
-
-<div>
-    <h5>@Model.UserName (@Model.TypeUser)</h5>
-    <form asp-action="DeleteConfirmed">
-        <input type="hidden" asp-for="IduserPK" />
-        <button type="submit" class="btn btn-danger">Eliminar</button>
-        <a href="@Url.Action("Index", "UserAccount")" class="btn btn-secondary">Cancelar</a>
-    </form>
+<div class="alert alert-warning" role="alert">
+    <h4>¿Estás seguro de que deseas eliminar este usuario?</h4>
+    <p>Esta acción no se puede deshacer.</p>
 </div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Nombre de Usuario: @Model.UserName</h5>
+        <p class="card-text"><strong>Tipo de Usuario:</strong> @Model.TypeUser</p>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="IduserPK" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

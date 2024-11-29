@@ -71,6 +71,14 @@
                 </a>
             </li>
 
+            <!-- Productos-->
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Product" asp-action="Index">
+                    <span>Productos</span>
+                </a>
+            </li>
+
+
 
             <!-- Tienda -->
             <li class="nav-item">
@@ -83,11 +91,10 @@
                 <div id="collapseTienda" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         
-                        <a class="collapse-item" href="#">Ir a Tienda</a>
-                        <a class="collapse-item" asp-controller="~/ModuloSucursales/home" asp-action="Index">Ir a Inventario</a>
+                        <a class="collapse-item" asp-controller="~/ModuloTiendaOnline/Home">Ir a Tienda Online</a>
                         <a class="collapse-item" asp-controller="home" asp-action="Inventario">Ir a Inventario</a>
-                        <a class="collapse-item" href="#">Reportes Tienda</a>
-                        <a class="collapse-item" href="#">Reportes Inventario</a>
+                        <a class="collapse-item" asp-controller="home" asp-action="Inventario">Reportes de Ventas</a>
+                        <a class="collapse-item" asp-controller="home" asp-action="Inventario">Reportes de Inventario</a>
                     </div>
                 </div>
             </li>
@@ -112,21 +119,7 @@
             </li>
 
 
-            <!-- Ventas-->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVentas"
-                   aria-expanded="true" aria-controls="collapseVentas">
-                    <i class=""></i><!--Agregar icono-->
-                    <span>Productos</span>
-                </a>
-                <div id="collapseVentas" class="collapse" aria-labelledby="headingUtilities"
-                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Editar</a>
-                        <a class="collapse-item" asp-controller="Productos" asp-action="Index">Buscar</a>
-                    </div>
-                </div>
-            </li>
+
 
 
             <hr class="sidebar-divider">
